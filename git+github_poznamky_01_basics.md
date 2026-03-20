@@ -1,0 +1,222 @@
+## GIT poznámky
+
+
+
+
+
+git init --- vytvorí nový git repozitár v aktuálnom prieèinku.
+
+
+
+git add . --- pridaj do git repozitara vsetky zmeny z current directory
+
+
+
+git add --all  --- pridaj do git repozitary vsetky zmeny z celeho projektu
+
+
+
+git add \* --- prida vsetky new a modified subory ale nie deleted zmeny
+
+
+
+git add \*.txt --- prida vsetky subory s touto koncovkou
+
+
+
+git reset  --- vrati vsetky zmeny naspat do working directory zas niesu pripravene na staging
+
+
+
+git reset HEAD\~ ---vymaze posledny commit a vrati vsetko spat do working directory
+
+
+
+git add index.html --- pridaj do git repozitara index.html zmeny
+
+
+
+git commit -m "add html and css file" --- ulozi zmeny
+
+
+
+git rm "four.txt" --- vymaze subor a zaroven stagne deletion
+
+
+
+git rm --cached index.html --- vymaze index.html zo stagingu ale necha to fyzicky vo working directory
+
+
+
+git rm -r <FOLDER> --- -r znamena recursive ak folder obsahuje ine subfoldery alebo files vsetky budu rekurzivne vymazane
+
+ak dame bez -r tak ibe ten folder bude vymazany NIE TO CO OBSAHUJE
+
+&#x20;
+
+git reset --hard --- vrati naspat nie len staged zmeny ako git reset ale aj celkove subory po vymazani
+
+
+
+
+
+git log --- zobrazi vsetky commity  q pre quit
+
+
+
+git branch --- vypise vsetky branches
+
+
+
+git branch development --- vytvori novy branch development
+
+
+
+git checkout development --- preradi sa na development branch
+
+
+
+git checkout commit\_ID  --- preradi sa do vybraneho commitu
+
+
+
+git merge nazov\_branchu  --- ked mam v obidvoch branchoch zmeny v tej istej veci vznikne merge konflikt musim vyriesit
+
+
+
+git restore file\_name  --- ak sme nieco pomenili a chceme to vratit a zmeny nie su este pripravene na commit mozeme runnut tento command  vratit sa
+
+
+
+git restore directory\_name --- to iste iba pre celu directory
+
+
+
+git restore . ---vrati cely repozitar
+
+
+
+git restore --staged --- restorne stagnute zmeny(ako keby neboli nikdy staged)
+
+
+
+git status  --- ukaze ci sme nieco modifikovali ...
+
+&#x20;
+
+git log --oneline ---skrati
+
+
+
+git checkout b3fa7d4eee48dc084d8fc4e05be16e962fced77d --- vrati spat do commitu urceneho hashcodom
+
+
+
+git stash --- odlozi nase zmeny aby sme mohli kedykolvek switchnut branch
+
+
+
+git stash pop --- ak chceme ziskat naspat nase stashnute zmeny
+
+
+
+git stash list --- vsetky stashe su v stash liste oldest on bottom newest on top pop vrati najnovsie
+
+
+
+git stash apply --- zmeny su vratene ako pri pop ale zaroven stashnute
+
+
+
+git stash pop stash @{0} ---
+
+
+
+git stash apply stash @{0} ---
+
+
+
+git stash drop --- vymaze specificky stash
+
+
+
+git revert commit\_id--- vrati projekt do jeho predosleho stadia kde boll commit ale nedeletne stary commit namieesto toho vytvori novy commit
+
+
+
+rozdiel od git reset: git reset vrati naspat na specificky commit ale vsetky novsie commity DISCARDNE
+
+
+
+
+
+
+
+## GITHUB poznámky:
+
+git remote add origin https://github.com/pouzivatel/nazov-projektu.git  --- prepoj s githubom
+
+
+
+git clone link --- naklonuje remote repozitary z githubu
+
+
+
+git push origin main
+
+
+
+git fetch  --- zoberie vsetky zmeny z githubu ale este ich neuvidis lebo nie su mergnute
+
+ak chceme vidiet musíme pouzit command:::
+
+git merge
+
+
+
+git pull --- vykona fetch a merge naraz
+
+
+
+\*\*\*iba z ktoreho pisem\*\*\*
+
+(current\_branch) git rebase branch\_name --- git najde najviac recent spolocny commit tychto dvoch brancov,vsetky commity z branchu z ktorehu robime rebase(current\_branch) su docasne odlozene, git vsetky nove commity z branch\_name da do current branchu a este NAVRCH tychto commito polozi presne tie odlozene commity z current branchu
+
+VYHODA cistejsia commit history
+
+NEVYHODA neodporuca sa pouzivat na public repositary kde viacej developerov spolu pracuju na projekte ak to musis pouzit informuj svoj tim moze rewritnut existing commit history PROBLEM
+
+
+
+
+
+#### PULL REQUESTY:
+
+spravil som zmeny v mojej branch prosim pozri sa na ne a ak su v pohode mergni ich do main branchu
+
+## 
+
+## terminalovky:
+
+:wq --- write and quit
+
+q --- quit
+
+ls --- zobrazi vsetky viditelne subory v priecinku (dir vo windows CMD)
+
+
+
+ls -la zobrazi aj hidden file
+
+
+
+mkdir gitVideo --- vytvor novy priecinok gitVideo
+
+
+
+cd gitVideo --- change direction gitVideo
+
+
+
+touch index.html app.css  --- vytvor fily index.html a app.css
+
