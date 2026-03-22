@@ -66,7 +66,7 @@ git log --- zobrazi vsetky commity  q pre quit
 
 git branch --- vypise vsetky branches
 
-
+git branch -a --- zobrazi vsetky vrstvy
 
 git branch development --- vytvori novy branch development
 
@@ -74,10 +74,13 @@ git branch development --- vytvori novy branch development
 
 git checkout development --- preradi sa na development branch
 
-
+git checkout -b branch_name --- hadam vis
 
 git checkout commit\_ID  --- preradi sa do vybraneho commitu
 
+git checkout main ^ --- preradi sa relativne head sa odradi vyssie
+
+git branch main HEAD~4 --- viac krat sa preradi vyssie
 
 
 git merge nazov\_branchu  --- ked mam v obidvoch branchoch zmeny v tej istej veci vznikne merge konflikt musim vyriesit
@@ -146,6 +149,14 @@ git revert commit\_id--- vrati projekt do jeho predosleho stadia kde boll commit
 
 rozdiel od git reset: git reset vrati naspat na specificky commit ale vsetky novsie commity DISCARDNE
 
+git cherry-pick --- uplatni zmeny z commitu z minulosti
+
+git rebase --- zmeni historiu prenesie seriu commitov na inu zaciatocnu poziciu napríklad mame main a hned zanho prenesieme nas branch
+
+git rebase -i --- interaktivne okno mozeme menit poradie
+
+git tag v1 C1 --- v1 je nazov tagu c1 je ktory commit ma byt taggnuty
+git describe bugFix --- 
 
 
 
@@ -160,8 +171,11 @@ git remote add origin https://github.com/pouzivatel/nazov-projektu.git  --- prep
 
 git clone link --- naklonuje remote repozitary z githubu
 
+git push -u origin main (urobíš raz a máš pokoj)
+potom uz staci iba git push
 
 
+alebo stale:
 git push origin main
 
 
@@ -186,6 +200,8 @@ VYHODA cistejsia commit history
 
 NEVYHODA neodporuca sa pouzivat na public repositary kde viacej developerov spolu pracuju na projekte ak to musis pouzit informuj svoj tim moze rewritnut existing commit history PROBLEM
 
+
+git pull --rebase --- vykona fetch a rebase naraz
 
 
 
