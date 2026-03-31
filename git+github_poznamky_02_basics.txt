@@ -186,6 +186,12 @@ ak chceme vidiet musíme pouzit command:::
 
 git merge
 
+GIT MERGE KONFLIKT FIX:
+git checkout --ours alebo --theirs
+git add .
+git merge --continue
+ak vyskoci vimko tak:
+ESC potom :wq   --- write quit
 
 
 git pull --- vykona fetch a merge naraz
